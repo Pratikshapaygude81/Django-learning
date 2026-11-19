@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'patient',
     'rest_framework',
+    'cbv_api',
 ]
 
 MIDDLEWARE = [
