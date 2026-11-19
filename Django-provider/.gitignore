@@ -1,0 +1,13 @@
+.env
+0001_initial.py
+0002_provider_availability.py
+0003_alter_provider_availability.py
+venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Django database
+db.sqlite3
