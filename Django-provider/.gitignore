@@ -1,7 +1,7 @@
 .env
-0001_initial.py
-0002_provider_availability.py
-0003_alter_provider_availability.py
+# Django migration files (keep __init__.py)
+**/migrations/*.py
+!**/migrations/__init__.py
 venv/
 venv/
 
