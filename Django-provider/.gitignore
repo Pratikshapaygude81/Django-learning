@@ -1,0 +1,13 @@
+.env
+# Django migration files (keep __init__.py)
+**/migrations/*.py
+!**/migrations/__init__.py
+venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Django database
+db.sqlite3

@@ -1,0 +1,9 @@
+<h1>Patient List</h1>
+
+{% for patient in patients %}
+    <p>{{ patient.name }}</p>
+    <p>{{ patient.age }}</p>
+    <hr>
+{% empty %}
+    <p>No patients found.</p>
+{% endfor %}
