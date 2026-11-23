@@ -6,6 +6,7 @@ from rest_framework import status
 from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Patient
 from .serializer import (
@@ -14,6 +15,11 @@ from .serializer import (
 )
 from .serializer import PatientLoginSerializer
 
+class PatientViewSet(ModelViewSet):
+    queryset = Patient.objects.all()
+    serializer_class = PatientSerializer
+    permission_classes = [IsAuthenticated]
+"""
 class PatientViewSet(ModelViewSet):
 
     queryset = Patient.objects.all()
@@ -68,4 +74,4 @@ class PatientViewSet(ModelViewSet):
         return Response(
         {"error": "Invalid email or password"},
         status=status.HTTP_401_UNAUTHORIZED
-    )
+    )"""
