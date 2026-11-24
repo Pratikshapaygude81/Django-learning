@@ -1,4 +1,3 @@
-
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import Patient
@@ -35,9 +34,19 @@ class PatientRegistrationSerializer(serializers.ModelSerializer):
         )
 
         return patient
+
+
 class PatientLoginSerializer(serializers.Serializer):
+
     email = serializers.EmailField()
     password = serializers.CharField(
         write_only=True,
         style={'input_type': 'password'}
+    )
+
+
+class RefreshTokenSerializer(serializers.Serializer):
+
+    refresh = serializers.CharField(
+        write_only=True
     )
